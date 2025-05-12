@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfólio</title>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            (function (d, script) {
+                script = d.createElement('script');
+                script.type = 'text/javascript';
+                script.async = true;
+                script.src = 'https://w.app/widget-v1/odZpwP.js';
+                d.getElementsByTagName('head')[0].appendChild(script);
+            }(document));
+        };
+    </script>
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+
+    <nav class="navegacao">
+        <ul class="Menu">
+            <li>
+                <a href="#inicio" class="menu-link">Inicio</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="img/foto do fabio.jpeg" alt="Fato de Fabio Rivanor" class="Foto-perfil">
+        <h1>Fabio Rivanor</h1>
+        <p class="cabecalho-sub-titulo">Desenvolverdor Front End</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Min</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Sou um desenvolvedor front-end apaixonado por criar experiências web únicas e memoráveis. Combino
+                código limpo com design moderno para desenvolver sites que não só funcionam perfeitamente, mas também
+                impressionam visualmente.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="img/foto do projeto carro.png" alt="projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Loja de carros</h3>
+                    <p class="paragrafo-projetos">Loja virtual moderna com animações suaves e design responsivo</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/foto projeto Nike.png" alt="projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Pagina de Viagens</h3>
+                    <p class="paragrafo-projetos">Loja virtual moderna A Nike é praticamente uma referência de estilo e
+                        qualidade no Brasil e em vários países do mundo.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/foto starbucks.png" alt="projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Starbucks</h3>
+                    <p class="paragrafo-projetos">Loja virtual moderna com animações suaves e design responsivo</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="campo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Bem-vindo</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Seja bem-vindo(a) ao meu perfil! Sou um entusiasta da programação, aprendendo HTML, CSS e
+                JavaScript, e estou trabalhando duro para melhorar minhas habilidades como Desenvolvedor Front-end.
+                Estou procurando oportunidades para aplicar minhas habilidades e aprender com profissionais experientes.
+                Se você tiver alguma oportunidade ou feedback, ficarei muito grato! Obrigado por visitar meu perfil!
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5511991525280'
+
+            const texto = Olá! Me chamo ${ nome }, ${ mensagem }
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = https://wa.me/${telefone}?text=${msgFormatada}
+
+                console.log(url)
+
+            window.open(url, '_blank')
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
